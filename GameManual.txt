@@ -1,0 +1,63 @@
+Slinger Showdown Run Requirements:
+
+Dependicies: Pygame version 2.0.0
+which can be installed using pip using command (via Windows Command Line assuming Python is installed appropriately):
+pip install pygame
+
+Built using Python Version 3.9.0
+
+
+Slinger Showdown Game Overview:
+
+Slinger Showdown is a top down racing game by which players are tasked with making it the furthest distance possible given a time constraint.
+
+Each checkpoint a player passes they will be given a boost by which can only be used when the car is stopped. Using a boost results in the timer increasing by 1 second.
+
+Each lap of the course (by which the player crosses the finish line), grants the player an additional 10 seconds to the timer.
+
+Points are calculated by the distance traveled between the checkpoints (this is either 310 or 300 by testing)
+
+The lap counter on screen keeps track of how many laps have been completed by the player.
+
+If the player has not used their one continue when the timer runs out they will be allowed to use it, 
+however using the continue sets the boost count to 0 regardless of what it was before the timer ran out, so use those boosts! (The lap counter is also set to 0 to now denote laps completed since the reset)
+Each lap is "consumed" to put 5 seconds on the timer from 0 (So 1 lap gives 5 seconds, 2 laps 10, 3 laps 15 and so on)
+
+Depending on if the individual sounds are toggled, there are 2 sounds total that can be used simultaneously, independently or not at all for checkpoints, one is the engine sound of the player car and another is a chime
+
+Music can also be toggled on and off as well as a sound effect for using the boosts.
+
+A "debug mode" can be accessed by uncommenting various lines in the racecar.py file,
+which will show how some of the math calculations maintaining the game operate as well as being able to show the location of checkpoints on screen
+
+
+Slinger Showdown Controls Overview:
+
+The Escape key pauses/unpauses the game (This doubles as the start button upon initially loading the game) (Music mutes when this is toggled so the music toggle doesn't work while paused but does work on load in)
+
+The W key moves the car about the course, a sound will play each time the player starts moving the car (this sound is also used for checkpoints and is toggled alongside it)
+
+The Q key quits the game
+
+The Spacebar will allow the player to use a boost while stopped so long as they have a boost to use
+
+The Enter key should the player have a continue and the conditions of the timer running out, the game state being currently inactive (by which the timer running out does automatically) and having a continue left,
+will allow the player to be able to continue their current "run" with the boost count and lap count reset to 0 from whatever position on the track they currently occupy. (The game will need to be unpaused using Escape)
+
+The E key will mute and unmute the engine sound
+
+The M key will mute and unmute the music
+
+The C key will mute and unmute the checkpoint chime sound
+
+The B key will mute and unmute the boost sound
+
+
+
+High Score Information:
+
+The current high score set by developer Shinsina is: 50,940
+
+Theoretically the max score is somewhere around 51,000 to 53,000 but be sure to push it as far as you can go!
+
+
